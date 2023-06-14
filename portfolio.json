@@ -1,0 +1,21 @@
+[
+  {
+    "id": "0",
+    "name": "Shadipedia",
+    "category":"App",
+    "img1": "/assets/img/portfolio/Shadipedia/1.png",
+    "img2": "/assets/img/portfolio/Shadipedia/2.jpg",
+    "img3": "/assets/img/portfolio/Shadipedia/3.png",
+    "url": "https://play.google.com/store/apps/details?id=com.spapp.shadipedia&pli=1",
+    "des": "Shadipedia is a mobile application. In this application the user can select any type of wedding material that he/she is looking for. App will provide the price, timing, information and location of the Venue, Car Rental Agency, Car Decorators, Venue Decorators, Food Providers and Gold Shop. A brief study of comparison with the existing solutions is also provided."
+  },
+  {
+    "id": "1",
+    "name": "Shadi",
+    "img1": "/assets/img/portfolio/Shadipedia/1.png",
+    "img2": "/assets/img/portfolio/Shadipedia/2.jpg",
+    "img3": "/assets/img/portfolio/Shadipedia/3.jpg",
+    "url": "https://play.google.com/store/apps/details?id=com.spapp.shadipedia&pli=1",
+    "des": "Shadipedia is a mobile application. In this app"
+  }
+]
