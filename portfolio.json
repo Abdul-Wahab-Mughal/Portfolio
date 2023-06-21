@@ -2,20 +2,25 @@
   {
     "id": "0",
     "name": "Shadipedia",
-    "category":"App",
-    "img1": "/assets/img/portfolio/Shadipedia/1.png",
-    "img2": "/assets/img/portfolio/Shadipedia/2.jpg",
-    "img3": "/assets/img/portfolio/Shadipedia/3.png",
+    "category": "App",
+    "img": "/assets/img/portfolio/shadipedia_img.png",
     "url": "https://play.google.com/store/apps/details?id=com.spapp.shadipedia&pli=1",
     "des": "Shadipedia is a mobile application. In this application the user can select any type of wedding material that he/she is looking for. App will provide the price, timing, information and location of the Venue, Car Rental Agency, Car Decorators, Venue Decorators, Food Providers and Gold Shop. A brief study of comparison with the existing solutions is also provided."
   },
   {
     "id": "1",
-    "name": "Shadi",
-    "img1": "/assets/img/portfolio/Shadipedia/1.png",
-    "img2": "/assets/img/portfolio/Shadipedia/2.jpg",
-    "img3": "/assets/img/portfolio/Shadipedia/3.jpg",
-    "url": "https://play.google.com/store/apps/details?id=com.spapp.shadipedia&pli=1",
-    "des": "Shadipedia is a mobile application. In this app"
+    "name": "Olio mama",
+    "category": "Web",
+    "img": "/assets/img/portfolio/oliomama_img.png",
+    "url": "https://webpage-oliomama.vercel.app/",
+    "des": "Perfume Online Store. In This store user cant buy Perfume. e-commerce website."
+  },
+  {
+    "id": "2",
+    "name": "Try Kar Lo",
+    "category": "App",
+    "img": "/assets/img/portfolio/Try_kar_lo_logo.jpg",
+    "url": "https://play.google.com/store/apps/details?id=com.app.trykarlo",
+    "des": "Trykarlo android app which is single vendor app in which you can select item add to cart and order in which you can see pending orders and delivered orders then you can also try Product using try now button in which you can try virtually any item before order"
   }
 ]

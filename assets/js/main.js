@@ -209,16 +209,18 @@
   fetch("/portfolio.json")
     .then((res) => res.json())
     .then((result) => {
+
       // console.log(result[id]);
       if (result[id]) {
         var res = result[id];
         document.getElementById("name").innerHTML = res.name;
         document.getElementById("category").innerHTML = res.category;
         document.getElementById("des").innerHTML = res.des;
-        // document.getElementById("url").innerHTML = res.name;
-        // document.getElementById("url").setAttribute("href", res.url);
-        document.getElementById("img1").src = res.img1;
-        document.getElementById("img2").src = res.img3;
+        document.getElementById("url").innerHTML = res.name;
+        document.getElementById("url").onclick = () => {
+          window.open(res.url);
+        };
+        document.getElementById("img1").src = res.img;
       }
     });
 })();
