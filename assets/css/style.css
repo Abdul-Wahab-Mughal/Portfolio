@@ -641,11 +641,14 @@ section .container {
 
 /*--------------------------------------------------------------
 # Portfolio
+# certificate
 --------------------------------------------------------------*/
+.portfolio .certificate-item,
 .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
 
+.portfolio #certificate-flters,
 .portfolio #portfolio-flters {
   padding: 0;
   margin: 0 auto 15px auto;
@@ -655,6 +658,7 @@ section .container {
   padding: 2px 15px;
 }
 
+.portfolio #certificate-flters li,
 .portfolio #portfolio-flters li {
   cursor: pointer;
   display: inline-block;
@@ -671,10 +675,13 @@ section .container {
 }
 
 .portfolio #portfolio-flters li:hover,
-.portfolio #portfolio-flters li.filter-active {
+.portfolio #certificate-flters li:hover,
+.portfolio #portfolio-flters li.filter-active,
+.portfolio #certificate-flters li.filter-active {
   background: #18d26e;
 }
 
+.portfolio #certificate-flters li:last-child,
 .portfolio #portfolio-flters li:last-child {
   margin-right: 0;
 }
@@ -686,10 +693,13 @@ section .container {
   z-index: 1;
   background: rgba(0, 0, 0, 0.6);
 }
-
+.portfolio .portfolio-wrap .text {
+  width: 50%;
+  height: 50%;
+}
 .portfolio .portfolio-wrap::before {
   content: "";
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.9);
   position: absolute;
   left: 30px;
   right: 30px;

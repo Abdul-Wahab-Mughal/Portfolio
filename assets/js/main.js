@@ -200,6 +200,38 @@
     height: "90vh",
   });
 
+  /**
+   * certificate isotope and filter
+   */
+  window.addEventListener("load", () => {
+    let portfolioContainer = select(".certificate-container");
+    if (portfolioContainer) {
+      let portfolioIsotope = new Isotope(portfolioContainer, {
+        itemSelector: ".certificate-item",
+        layoutMode: "fitRows",
+      });
+
+      let portfolioFilters = select("#certificate-flters li", true);
+
+      on(
+        "click",
+        "#certificate-flters li",
+        function (e) {
+          e.preventDefault();
+          portfolioFilters.forEach(function (el) {
+            el.classList.remove("filter-active");
+          });
+          this.classList.add("filter-active");
+
+          portfolioIsotope.arrange({
+            filter: this.getAttribute("data-filter"),
+          });
+        },
+        true
+      );
+    }
+  });
+
   // console.log(window.location.search);
   const url = window.location.search;
   const urlparam = new URLSearchParams(url);
@@ -209,7 +241,6 @@
   fetch("/portfolio.json")
     .then((res) => res.json())
     .then((result) => {
-
       // console.log(result[id]);
       if (result[id]) {
         var res = result[id];
@@ -223,4 +254,5 @@
         document.getElementById("img1").src = res.img;
       }
     });
+
 })();
