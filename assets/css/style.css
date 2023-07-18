@@ -85,7 +85,7 @@ h6 {
   color: rgba(255, 255, 255, 0.8);
 }
 
-#header h2 span {
+#header h2 span span {
   color: #fff;
   border-bottom: 2px solid #18d26e;
   padding-bottom: 6px;
@@ -395,49 +395,6 @@ section .container {
   color: #18d26e;
 }
 
-.dynamic-txts {
-  height: 50px;
-  overflow: hidden;
-  list-style-type: none;
-}
-
-.dynamic-txts li {
-  position: relative;
-  top: 0;
-  animation: slide 6s steps(2) infinite;
-}
-
-@keyframes slide {
-  100% {
-    top: -100px;
-  }
-}
-
-.dynamic-txts li span {
-  position: relative;
-}
-
-.dynamic-txts li span::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  height: 115%;
-  background-color: black;
-  width: 100%;
-  border-left: 2px solid  #18d26e;
-  animation: typing 3s steps(200) infinite;
-}
-
-@keyframes typing {
-  40%,
-  60% {
-    left: calc(100% + 10px);
-  }
-  100% {
-    left: 0;
-  }
-}
-
 .about-me .content ul {
   list-style: none;
   padding: 0;
@@ -662,6 +619,7 @@ section .container {
 }
 
 .services .icon-box:hover {
+  transform: scale(1.02);
   background: #18d26e;
   border-color: #18d26e;
 }
