@@ -1,0 +1,111 @@
+{
+  "Portfolio": [
+    {
+      "id": "0",
+      "name": "Shadipedia",
+      "category": "app",
+      "logo": "/assets/img/portfolio/shadipedia_logo.jpg",
+      "img": "/assets/img/portfolio/shadipedia_img.png",
+      "url": "https://play.google.com/store/apps/details?id=com.spapp.shadipedia&pli=1",
+      "des": "Shadipedia is a mobile application. In this application the user can select any type of wedding material that he/she is looking for. App will provide the price, timing, information and location of the Venue, Car Rental Agency, Car Decorators, Venue Decorators, Food Providers and Gold Shop. A brief study of comparison with the existing solutions is also provided."
+    },
+    {
+      "id": "1",
+      "name": "Olio mama",
+      "category": "web",
+      "logo": "/assets/img/portfolio/oliomama_logo.jpg",
+      "img": "/assets/img/portfolio/oliomama_img.png",
+      "url": "https://webpage-oliomama.vercel.app/",
+      "des": "Perfume Online Store. In This store user cant buy Perfume. e-commerce website."
+    },
+    {
+      "id": "2",
+      "name": "Try Kar Lo",
+      "category": "app",
+      "logo": "/assets/img/portfolio/Try_kar_lo_logo.jpg",
+      "img": "/assets/img/portfolio/Try_kar_lo_img.png",
+      "url": "https://play.google.com/store/apps/details?id=com.app.trykarlo",
+      "des": "Trykarlo android app which is single vendor app in which you can select item add to cart and order in which you can see pending orders and delivered orders then you can also try Product using try now button in which you can try virtually any item before order"
+    },
+    {
+      "id": "3",
+      "name": "FunBook",
+      "category": "web",
+      "logo": "/assets/img/portfolio/funbook_logo.jpg",
+      "img": "/assets/img/portfolio/funbook_img.png",
+      "url": "https://funbook.vercel.app",
+      "des": "Website Like Facebook Login, Register, Profile, Posts, like and crud operation with backend."
+    },
+    {
+      "id": "4",
+      "name": "Auctionare",
+      "category": "app",
+      "logo": "/assets/img/portfolio/Auctionare_logo.jpg",
+      "img": "/assets/img/portfolio/Auctionare_img.png",
+      "url": "https://play.google.com/store/apps/details?id=com.cust.auctionare",
+      "des": "Auctionare is platform which connects sellers and bidders. We want to solve the problem that bidders can be at one auction room at once. As auction take place in many areas but one bidder can be at one place so this platform provides bidder to bid on anything which is on auction list having a wide variety to bid on. As a seller, seller gets more bidders to bid on their items. Anyone can bid on items using this Mobile android app."
+    }
+  ],
+  "Certificate": [
+    {
+      "id": "0",
+      "name": "javascript basic",
+      "category": "hackerRank",
+      "logo": "assets/img/certificate/hackerRank/javascript_basic certificate.PNG"
+    },
+    {
+      "id": "1",
+      "name": "problem solving basic",
+      "category": "hackerRank",
+      "logo": "assets/img/certificate/hackerRank/problem_solving_basic certificate.PNG"
+    },
+    {
+      "id": "2",
+      "name": "problem solving intermediate",
+      "category": "hackerRank",
+      "logo": "assets/img/certificate/hackerRank/problem_solving_intermediate certificate.PNG"
+    },
+    {
+      "id": "3",
+      "name": "Introduction to Front-End Development",
+      "category": "coursera",
+      "logo": "assets/img/certificate/coursera/Introduction to Front-End Development Certificate.PNG"
+    },
+    {
+      "id": "4",
+      "name": "Programming with JavaScript",
+      "category": "coursera",
+      "logo": "assets/img/certificate/coursera/Programmingwith JavaScript Certificate.PNG"
+    },
+    {
+      "id": "5",
+      "name": "Server side JavaScript",
+      "category": "coursera",
+      "logo": "assets/img/certificate/coursera/Server side JavaScript.PNG"
+    },
+    {
+      "id": "6",
+      "name": "Building REST APIs Using Node js and Express",
+      "category": "coursera",
+      "logo": "assets/img/certificate/coursera/Building REST APIs Using Node js.PNG"
+    },
+    {
+      "id": "7",
+      "name": "React Basics",
+      "category": "coursera",
+      "logo": "assets/img/certificate/coursera/React Basics.PNG"
+    },
+    {
+      "id": "8",
+      "name": "Advanced React",
+      "category": "coursera",
+      "logo": "assets/img/certificate/coursera/Advanced React.PNG"
+    },
+    {
+      "id": "9",
+      "name": "Front End Development - HTML",
+      "category": "greatlearning",
+      "logo": "assets/img/certificate/greatlearning/Front End Development - HTML.jpg"
+    }
+  ]
+}

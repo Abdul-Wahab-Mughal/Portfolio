@@ -1,258 +1,282 @@
-(function () {
-  "use strict";
-
-  /**
-   * Easy selector helper function
-   */
-  const select = (el, all = false) => {
-    el = el.trim();
-    if (all) {
-      return [...document.querySelectorAll(el)];
-    } else {
-      return document.querySelector(el);
-    }
-  };
-
-  /**
-   * Easy event listener function
-   */
-  const on = (type, el, listener, all = false) => {
-    let selectEl = select(el, all);
-
-    if (selectEl) {
-      if (all) {
-        selectEl.forEach((e) => e.addEventListener(type, listener));
-      } else {
-        selectEl.addEventListener(type, listener);
-      }
-    }
-  };
-
-  /**
-   * Scrolls to an element with header offset
-   */
-  const scrollto = (el) => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
-  /**
-   * Mobile nav toggle
-   */
-  on("click", ".mobile-nav-toggle", function (e) {
-    select("#navbar").classList.toggle("navbar-mobile");
-    this.classList.toggle("bi-list");
-    this.classList.toggle("bi-x");
+var certificate;
+fetch("/list.json")
+  .then((res) => res.json())
+  .then((result) => {
+    certificate = result.Certificate.map(
+      (data) =>
+        `<div class="col-lg-4 col-md-6 certificate-item filter-${data.category}">
+          <div class="portfolio-wrap">
+            <img src="${data.logo}" class="img-fluid"alt="" />
+            <div class="portfolio-info">
+              <h4>${data.name}</h4>
+              <p>${data.category}</p>
+              <div class="portfolio-links">
+                <a href="${data.logo}" data-gallery="portfolioGallery" class="portfolio-lightbox" >
+                  <i class="bx bx-plus"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>`
+    );
+    document.getElementById("cer-set").innerHTML = certificate.join("");
   });
 
-  /**
-   * Scrool with ofset on links with a class name .scrollto
-   */
-  on(
-    "click",
-    "#navbar .nav-link",
-    function (e) {
-      let section = select(this.hash);
-      if (section) {
-        e.preventDefault();
+setInterval(() => {
+  (() => {
+    "use strict";
 
-        let navbar = select("#navbar");
-        let header = select("#header");
-        let sections = select("section", true);
-        let navlinks = select("#navbar .nav-link", true);
+    /**
+     * Easy selector helper function
+     */
+    const select = (el, all = false) => {
+      el = el.trim();
+      if (all) {
+        return [...document.querySelectorAll(el)];
+      } else {
+        return document.querySelector(el);
+      }
+    };
 
-        navlinks.forEach((item) => {
-          item.classList.remove("active");
-        });
+    /**
+     * Easy event listener function
+     */
+    const on = (type, el, listener, all = false) => {
+      let selectEl = select(el, all);
 
-        this.classList.add("active");
-
-        if (navbar.classList.contains("navbar-mobile")) {
-          navbar.classList.remove("navbar-mobile");
-          let navbarToggle = select(".mobile-nav-toggle");
-          navbarToggle.classList.toggle("bi-list");
-          navbarToggle.classList.toggle("bi-x");
+      if (selectEl) {
+        if (all) {
+          selectEl.forEach((e) => e.addEventListener(type, listener));
+        } else {
+          selectEl.addEventListener(type, listener);
         }
+      }
+    };
 
-        if (this.hash == "#header") {
-          header.classList.remove("header-top");
-          sections.forEach((item) => {
-            item.classList.remove("section-show");
+    /**
+     * Scrolls to an element with header offset
+     */
+    const scrollto = (el) => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
+
+    /**
+     * Mobile nav toggle
+     */
+    on("click", ".mobile-nav-toggle", function (e) {
+      select("#navbar").classList.toggle("navbar-mobile");
+      this.classList.toggle("bi-list");
+      this.classList.toggle("bi-x");
+    });
+
+    /**
+     * Scrool with ofset on links with a class name .scrollto
+     */
+    on(
+      "click",
+      "#navbar .nav-link",
+      function (e) {
+        let section = select(this.hash);
+        if (section) {
+          e.preventDefault();
+
+          let navbar = select("#navbar");
+          let header = select("#header");
+          let sections = select("section", true);
+          let navlinks = select("#navbar .nav-link", true);
+
+          navlinks.forEach((item) => {
+            item.classList.remove("active");
           });
-          return;
-        }
 
-        if (!header.classList.contains("header-top")) {
-          header.classList.add("header-top");
-          setTimeout(function () {
+          this.classList.add("active");
+
+          if (navbar.classList.contains("navbar-mobile")) {
+            navbar.classList.remove("navbar-mobile");
+            let navbarToggle = select(".mobile-nav-toggle");
+            navbarToggle.classList.toggle("bi-list");
+            navbarToggle.classList.toggle("bi-x");
+          }
+
+          if (this.hash == "#header") {
+            header.classList.remove("header-top");
+            sections.forEach((item) => {
+              item.classList.remove("section-show");
+            });
+            return;
+          }
+
+          if (!header.classList.contains("header-top")) {
+            header.classList.add("header-top");
+            setTimeout(function () {
+              sections.forEach((item) => {
+                item.classList.remove("section-show");
+              });
+              section.classList.add("section-show");
+            }, 350);
+          } else {
             sections.forEach((item) => {
               item.classList.remove("section-show");
             });
             section.classList.add("section-show");
-          }, 350);
-        } else {
-          sections.forEach((item) => {
-            item.classList.remove("section-show");
-          });
-          section.classList.add("section-show");
-        }
-
-        scrollto(this.hash);
-      }
-    },
-    true
-  );
-
-  /**
-   * Activate/show sections on load with hash links
-   */
-  window.addEventListener("load", () => {
-    if (window.location.hash) {
-      let initial_nav = select(window.location.hash);
-
-      if (initial_nav) {
-        let header = select("#header");
-        let navlinks = select("#navbar .nav-link", true);
-
-        header.classList.add("header-top");
-
-        navlinks.forEach((item) => {
-          if (item.getAttribute("href") == window.location.hash) {
-            item.classList.add("active");
-          } else {
-            item.classList.remove("active");
           }
-        });
 
-        setTimeout(function () {
-          initial_nav.classList.add("section-show");
-        }, 350);
-
-        scrollto(window.location.hash);
-      }
-    }
-  });
-
-  /**
-   * Skills animation
-   */
-  let skilsContent = select(".skills-content");
-  if (skilsContent) {
-    new Waypoint({
-      element: skilsContent,
-      offset: "80%",
-      handler: function (direction) {
-        let progress = select(".progress .progress-bar", true);
-        progress.forEach((el) => {
-          el.style.width = el.getAttribute("aria-valuenow") + "%";
-        });
+          scrollto(this.hash);
+        }
       },
-    });
-  }
+      true
+    );
 
-  /**
-   * Porfolio isotope and filter
-   */
-  window.addEventListener("load", () => {
-    let portfolioContainer = select(".portfolio-container");
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: ".portfolio-item",
-        layoutMode: "fitRows",
-      });
+    /**
+     * Activate/show sections on load with hash links
+     */
+    window.addEventListener("load", () => {
+      if (window.location.hash) {
+        let initial_nav = select(window.location.hash);
 
-      let portfolioFilters = select("#portfolio-flters li", true);
+        if (initial_nav) {
+          let header = select("#header");
+          let navlinks = select("#navbar .nav-link", true);
 
-      on(
-        "click",
-        "#portfolio-flters li",
-        function (e) {
-          e.preventDefault();
-          portfolioFilters.forEach(function (el) {
-            el.classList.remove("filter-active");
+          header.classList.add("header-top");
+
+          navlinks.forEach((item) => {
+            if (item.getAttribute("href") == window.location.hash) {
+              item.classList.add("active");
+            } else {
+              item.classList.remove("active");
+            }
           });
-          this.classList.add("filter-active");
 
-          portfolioIsotope.arrange({
-            filter: this.getAttribute("data-filter"),
-          });
-        },
-        true
-      );
-    }
-  });
+          setTimeout(function () {
+            initial_nav.classList.add("section-show");
+          }, 350);
 
-  /**
-   * Initiate portfolio lightbox
-   */
-  const portfolioLightbox = GLightbox({
-    selector: ".portfolio-lightbox",
-  });
-
-  /**
-   * Initiate portfolio details lightbox
-   */
-  const portfolioDetailsLightbox = GLightbox({
-    selector: ".portfolio-details-lightbox",
-    width: "90%",
-    height: "90vh",
-  });
-
-  /**
-   * certificate isotope and filter
-   */
-  window.addEventListener("load", () => {
-    let portfolioContainer = select(".certificate-container");
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: ".certificate-item",
-        layoutMode: "fitRows",
-      });
-
-      let portfolioFilters = select("#certificate-flters li", true);
-
-      on(
-        "click",
-        "#certificate-flters li",
-        function (e) {
-          e.preventDefault();
-          portfolioFilters.forEach(function (el) {
-            el.classList.remove("filter-active");
-          });
-          this.classList.add("filter-active");
-
-          portfolioIsotope.arrange({
-            filter: this.getAttribute("data-filter"),
-          });
-        },
-        true
-      );
-    }
-  });
-
-  // console.log(window.location.search);
-  const url = window.location.search;
-  const urlparam = new URLSearchParams(url);
-  const id = urlparam.get("id");
-  // console.log(id);
-
-  fetch("/portfolio.json")
-    .then((res) => res.json())
-    .then((result) => {
-      // console.log(result[id]);
-      if (result[id]) {
-        var res = result[id];
-        document.getElementById("name").innerHTML = res.name;
-        document.getElementById("category").innerHTML = res.category;
-        document.getElementById("des").innerHTML = res.des;
-        document.getElementById("url").innerHTML = res.name;
-        document.getElementById("url").onclick = () => {
-          window.open(res.url);
-        };
-        document.getElementById("img1").src = res.img;
+          scrollto(window.location.hash);
+        }
       }
     });
 
-})();
+    /**
+     * Skills animation
+     */
+    let skilsContent = select(".skills-content");
+    if (skilsContent) {
+      new Waypoint({
+        element: skilsContent,
+        offset: "80%",
+        handler: function (direction) {
+          let progress = select(".progress .progress-bar", true);
+          progress.forEach((el) => {
+            el.style.width = el.getAttribute("aria-valuenow") + "%";
+          });
+        },
+      });
+    }
+
+    /**
+     * Porfolio isotope and filter
+     */
+    window.addEventListener("load", () => {
+      let portfolioContainer = select(".portfolio-container");
+      if (portfolioContainer) {
+        let portfolioIsotope = new Isotope(portfolioContainer, {
+          itemSelector: ".portfolio-item",
+          layoutMode: "fitRows",
+        });
+
+        let portfolioFilters = select("#portfolio-flters li", true);
+
+        on(
+          "click",
+          "#portfolio-flters li",
+          function (e) {
+            e.preventDefault();
+            portfolioFilters.forEach(function (el) {
+              el.classList.remove("filter-active");
+            });
+            this.classList.add("filter-active");
+
+            portfolioIsotope.arrange({
+              filter: this.getAttribute("data-filter"),
+            });
+          },
+          true
+        );
+      }
+    });
+
+    /**
+     * Initiate portfolio lightbox
+     */
+    const portfolioLightbox = GLightbox({
+      selector: ".portfolio-lightbox",
+    });
+
+    /**
+     * Initiate portfolio details lightbox
+     */
+    const portfolioDetailsLightbox = GLightbox({
+      selector: ".portfolio-details-lightbox",
+      width: "90%",
+      height: "90vh",
+    });
+
+    /**
+     * certificate isotope and filter
+     */
+    setInterval(() => {
+      window.addEventListener("load", () => {
+        let portfolioContainer = select(".certificate-container");
+        if (portfolioContainer) {
+          let portfolioIsotope = new Isotope(portfolioContainer, {
+            itemSelector: ".certificate-item",
+            layoutMode: "fitRows",
+          });
+          let portfolioFilters = select("#certificate-flters li", true);
+          on(
+            "click",
+            "#certificate-flters li",
+            function (e) {
+              e.preventDefault();
+              portfolioFilters.forEach(function (el) {
+                el.classList.remove("filter-active");
+              });
+              this.classList.add("filter-active");
+
+              portfolioIsotope.arrange({
+                filter: this.getAttribute("data-filter"),
+              });
+            },
+            true
+          );
+        }
+      });
+    }, 100);
+
+    // console.log(window.location.search);
+    const url = window.location.search;
+    const urlparam = new URLSearchParams(url);
+    const id = urlparam.get("id");
+    // console.log(id);
+
+    fetch("/list.json")
+      .then((res) => res.json())
+      .then((result) => {
+        if (id) {
+          var res = result.Portfolio[id];
+          document.getElementById("name").innerHTML = res.name;
+          document.getElementById("category").innerHTML = res.category;
+          document.getElementById("des").innerHTML = res.des;
+          document.getElementById("url").innerHTML = res.name;
+          document.getElementById("url").onclick = () => {
+            window.open(res.url);
+          };
+          document.getElementById("img1").src = res.img;
+        }
+      });
+  })();
+});

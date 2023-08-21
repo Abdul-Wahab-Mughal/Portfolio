@@ -69,14 +69,42 @@ h6 {
   padding: 0;
   line-height: 1;
   font-weight: 700;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
 }
-
+#header h1 div {
+  position: relative;
+  width: fit-content;
+}
 #header h1 a,
 #header h1 a:hover {
   color: #fff;
   line-height: 1;
   display: inline-block;
+}
+
+#header h1 a:last-child {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 45px;
+  left: 0;
+  animation: typing 5s infinite;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  0%,
+  100% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+}
+#header h1 a:last-child span {
+  position: absolute;
+  white-space: nowrap;
+  left: 0;
 }
 
 #header h2 {
@@ -117,6 +145,15 @@ h6 {
 
 #header .social-links a:hover {
   background: #18d26e;
+}
+
+#header .social-links a:last-child {
+  width: fit-content;
+  border-radius: 25px;
+  padding: 10px;
+}
+#header .social-links a:last-child i {
+  margin-right: 15px;
 }
 
 @media (max-width: 992px) {
@@ -343,6 +380,7 @@ section.section-show {
 section .container {
   background: rgba(0, 0, 0, 0.9);
   padding: 30px;
+  transition: 1s;
 }
 
 @media (max-width: 768px) {
