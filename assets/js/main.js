@@ -1,8 +1,7 @@
-var certificate;
 fetch("/list.json")
   .then((res) => res.json())
   .then((result) => {
-    certificate = result.Certificate.map(
+    var certificate = result.Certificate.map(
       (data) =>
         `<div class="col-lg-4 col-md-6 certificate-item filter-${data.category}">
           <div class="portfolio-wrap">
@@ -228,8 +227,8 @@ setInterval(() => {
     /**
      * certificate isotope and filter
      */
-    setInterval(() => {
-      window.addEventListener("load", () => {
+    window.addEventListener("load", () => {
+      setInterval(() => {
         let portfolioContainer = select(".certificate-container");
         if (portfolioContainer) {
           let portfolioIsotope = new Isotope(portfolioContainer, {
@@ -254,8 +253,8 @@ setInterval(() => {
             true
           );
         }
-      });
-    }, 100);
+      },1000);
+    });
 
     // console.log(window.location.search);
     const url = window.location.search;
