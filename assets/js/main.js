@@ -22,6 +22,28 @@ fetch("/list.json")
       document.getElementById("cer-set").innerHTML = certificate.join("");
   });
 
+// console.log(window.location.search);
+const url = window.location.search;
+const urlparam = new URLSearchParams(url);
+const id = urlparam.get("id");
+// console.log(id);
+
+fetch("/list.json")
+  .then((res) => res.json())
+  .then((result) => {
+    if (id) {
+      var res = result.Portfolio[id];
+      document.getElementById("name").innerHTML = res.name;
+      document.getElementById("category").innerHTML = res.category;
+      document.getElementById("des").innerHTML = res.des;
+      document.getElementById("url").innerHTML = res.name;
+      document.getElementById("url").onclick = () => {
+        window.open(res.url);
+      };
+      document.getElementById("img1").src = res.img;
+    }
+  });
+
 setInterval(() => {
   (() => {
     "use strict";
@@ -256,27 +278,5 @@ setInterval(() => {
         }
       }, 1000);
     });
-
-    // console.log(window.location.search);
-    const url = window.location.search;
-    const urlparam = new URLSearchParams(url);
-    const id = urlparam.get("id");
-    // console.log(id);
-
-    fetch("/list.json")
-      .then((res) => res.json())
-      .then((result) => {
-        if (id) {
-          var res = result.Portfolio[id];
-          document.getElementById("name").innerHTML = res.name;
-          document.getElementById("category").innerHTML = res.category;
-          document.getElementById("des").innerHTML = res.des;
-          document.getElementById("url").innerHTML = res.name;
-          document.getElementById("url").onclick = () => {
-            window.open(res.url);
-          };
-          document.getElementById("img1").src = res.img;
-        }
-      });
   })();
 });
