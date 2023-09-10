@@ -18,7 +18,8 @@ fetch("/list.json")
           </div>
         </div>`
     );
-    document.getElementById("cer-set").innerHTML = certificate.join("");
+    if (document.getElementById("cer-set"))
+      document.getElementById("cer-set").innerHTML = certificate.join("");
   });
 
 setInterval(() => {
@@ -253,7 +254,7 @@ setInterval(() => {
             true
           );
         }
-      },1000);
+      }, 1000);
     });
 
     // console.log(window.location.search);
