@@ -34,7 +34,7 @@
       "logo": "/assets/img/portfolio/funbook_logo.jpg",
       "img": "/assets/img/portfolio/funbook_img.png",
       "url": "https://funbook.vercel.app",
-      "des": "Website Like Facebook Login, Register, Profile, Posts, like and crud operation with backend."
+      "des": "Website in React.js Like Facebook Login, Register, Profile, Posts, like and crud operation with backend. "
     },
     {
       "id": "4",
