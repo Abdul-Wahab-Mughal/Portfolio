@@ -45,6 +45,7 @@
       "url": "https://play.google.com/store/apps/details?id=com.cust.auctionare",
       "des": "Auctionare is platform which connects sellers and bidders. We want to solve the problem that bidders can be at one auction room at once. As auction take place in many areas but one bidder can be at one place so this platform provides bidder to bid on anything which is on auction list having a wide variety to bid on. As a seller, seller gets more bidders to bid on their items. Anyone can bid on items using this Mobile android app."
     },
+<<<<<<< HEAD
     {
       "id": "5",
       "name": "KitGaming",
@@ -62,6 +63,16 @@
       "img": "/assets/img/portfolio/todolistreact_img.PNG",
       "url": "https://reactjs-small-project.vercel.app/Todo-list",
       "des": "fontend Website with animation Todo List site. Sample Reactjs"
+=======
+     {
+      "id": "5",
+      "name": "Kit Gaming",
+      "category": "web",
+      "logo": "/assets/img/portfolio/Auctionare_logo.jpg",
+      "img": "/assets/img/portfolio/Auctionare_img.png",
+      "url": "https://kit-gaming.vercel.app",
+      "des": "Website with animation gaming site"
+>>>>>>> 48df621a905210f600fb123f518d0480b1defb1b
     }
   ],
   "Certificate": [
