@@ -62,6 +62,15 @@
       "img": "/assets/img/portfolio/todolistreact_img.PNG",
       "url": "https://reactjs-small-project.vercel.app/Todo-list",
       "des": "fontend Website with animation Todo List site. Sample Reactjs"
+    },
+    {
+      "id": "7",
+      "name": "Calculator",
+      "category": "Web",
+      "logo": "/assets/img/portfolio/calculator_logo.PNG",
+      "img": "/assets/img/portfolio/calculator_img.png",
+      "url": "https://reactjs-small-project.vercel.app/Calculator",
+      "des": "fontend Website with animation Calculator site. Sample Reactjs With Dark Mode"
     }
   ],
   "Certificate": [
