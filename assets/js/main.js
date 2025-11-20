@@ -1,27 +1,3 @@
-fetch("/list.json")
-  .then((res) => res.json())
-  .then((result) => {
-    var certificate = result.Certificate.map(
-      (data) =>
-        `<div class="col-lg-4 col-md-6 certificate-item filter-${data.category}">
-          <div class="portfolio-wrap">
-            <img src="${data.logo}" class="img-fluid"alt="" />
-            <div class="portfolio-info">
-              <h4>${data.name}</h4>
-              <p>${data.category}</p>
-              <div class="portfolio-links">
-                <a href="${data.logo}" data-gallery="portfolioGallery" class="portfolio-lightbox" >
-                  <i class="bx bx-plus"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>`
-    );
-    if (document.getElementById("cer-set"))
-      document.getElementById("cer-set").innerHTML = certificate.join("");
-  });
-
 // console.log(window.location.search);
 const url = window.location.search;
 const urlparam = new URLSearchParams(url);
