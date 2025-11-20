@@ -227,32 +227,30 @@ setInterval(() => {
      * certificate isotope and filter
      */
     window.addEventListener("load", () => {
-      setInterval(() => {
-        let portfolioContainer = select(".certificate-container");
-        if (portfolioContainer) {
-          let portfolioIsotope = new Isotope(portfolioContainer, {
-            itemSelector: ".certificate-item",
-            layoutMode: "fitRows",
-          });
-          let portfolioFilters = select("#certificate-flters li", true);
-          on(
-            "click",
-            "#certificate-flters li",
-            function (e) {
-              e.preventDefault();
-              portfolioFilters.forEach(function (el) {
-                el.classList.remove("filter-active");
-              });
-              this.classList.add("filter-active");
+      let portfolioContainer = select(".certificate-container");
+      if (portfolioContainer) {
+        let portfolioIsotope = new Isotope(portfolioContainer, {
+          itemSelector: ".certificate-item",
+          layoutMode: "fitRows",
+        });
+        let portfolioFilters = select("#certificate-flters li", true);
+        on(
+          "click",
+          "#certificate-flters li",
+          function (e) {
+            e.preventDefault();
+            portfolioFilters.forEach(function (el) {
+              el.classList.remove("filter-active");
+            });
+            this.classList.add("filter-active");
 
-              portfolioIsotope.arrange({
-                filter: this.getAttribute("data-filter"),
-              });
-            },
-            true
-          );
-        }
-      }, 1000);
+            portfolioIsotope.arrange({
+              filter: this.getAttribute("data-filter"),
+            });
+          },
+          true
+        );
+      }
     });
   })();
 });
