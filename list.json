@@ -71,6 +71,15 @@
       "img": "/assets/img/portfolio/calculator_img.png",
       "url": "https://reactjs-small-project.vercel.app/Calculator",
       "des": "fontend Website with animation Calculator site. Sample Reactjs With Dark Mode"
+    },
+    {
+      "id": "8",
+      "name": "Animation set",
+      "category": "Web",
+      "logo": "/assets/img/portfolio/animation_logo.png",
+      "img": "/assets/img/portfolio/animation_img.png",
+      "url": "https://animation-set.vercel.app/",
+      "des": "fontend Website with animation button, text, menu, loading and small project. Sample Reactjs With Dark Mode"
     }
   ]
 }

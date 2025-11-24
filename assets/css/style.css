@@ -861,6 +861,16 @@ section .container {
   bottom: 0;
   overflow-y: auto;
 }
+.portfolio-details img {
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.portfolio-details .container .col-lg-8 {
+  max-height: 750px;
+}
 
 .portfolio-details .container {
   padding-top: 20px;
