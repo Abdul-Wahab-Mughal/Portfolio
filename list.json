@@ -94,6 +94,14 @@
       "img": "/assets/img/portfolio/sundown studio.png",
       "url": "https://sundown-studio-gamma.vercel.app/",
       "des": "frontend Website with animation Sample copy of sundow studio site. <br> This site use in bootstrap, html, css, javascript."
+    },
+    {
+      "id": "11",
+      "name": "Crazy Slider Effects",
+      "category": "Web",
+      "img": "/assets/img/portfolio/crazy slider effects.png",
+      "url": "https://crazy-slider-effects.vercel.app/",
+      "des": "frontend Website with animation banner section. <br> This site use in html, css, javascript."
     }
   ]
 }
