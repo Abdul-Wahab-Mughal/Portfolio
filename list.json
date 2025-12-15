@@ -61,34 +61,39 @@
       "logo": "/assets/img/portfolio/todolistreact_logo.PNG",
       "img": "/assets/img/portfolio/todolistreact_img.PNG",
       "url": "https://reactjs-small-project.vercel.app/Todo-list",
-      "des": "fontend Website with animation Todo List site. Sample Reactjs"
+      "des": "frontend Website with animation Todo List site. Sample Reactjs"
     },
     {
       "id": "7",
       "name": "Calculator",
       "category": "Web",
-      "logo": "/assets/img/portfolio/calculator_logo.PNG",
       "img": "/assets/img/portfolio/calculator_img.png",
       "url": "https://reactjs-small-project.vercel.app/Calculator",
-      "des": "fontend Website with animation Calculator site. Sample Reactjs With Dark Mode"
+      "des": "frontend Website with animation Calculator site. Sample Reactjs With Dark Mode"
     },
     {
       "id": "8",
       "name": "Animation set",
       "category": "Web",
-      "logo": "",
       "img": "/assets/img/portfolio/animation_img.png",
       "url": "https://animation-set.vercel.app/",
-      "des": "fontend Website with animation button, text, menu, loading and small project."
+      "des": "frontend Website with animation button, text, menu, loading and small project."
     },
     {
       "id": "9",
       "name": "Hover Box",
       "category": "Web",
-      "logo": "",
       "img": "/assets/img/portfolio/Hover-box.png",
       "url": "https://reactjs-small-project.vercel.app/Hover%20Box",
-      "des": "fontend Website with animation Sample Reactjs With Dark Mode"
+      "des": "frontend Website with animation Sample Reactjs With Dark Mode. <br> This site use in Javascript, html, css, tailwind."
+    },
+    {
+      "id": "10",
+      "name": "Sundown studio",
+      "category": "Web",
+      "img": "/assets/img/portfolio/sundown studio.png",
+      "url": "https://sundown-studio-gamma.vercel.app/",
+      "des": "frontend Website with animation Sample copy of sundow studio site. <br> This site use in bootstrap, html, css, javascript."
     }
   ]
 }
