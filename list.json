@@ -102,6 +102,31 @@
       "img": "/assets/img/portfolio/crazy slider effects.png",
       "url": "https://crazy-slider-effects.vercel.app/",
       "des": "frontend Website with animation banner section. <br> This site use in html, css, javascript."
+    },
+    {
+      "id": "12",
+      "name": "99 Technologies",
+      "category": "WordPress",
+      "img": "/assets/img/portfolio/99Technologies.jpg",
+      "url": "https://99technologies.com/",
+      "des": "This website is a Software company."
+    },
+    {
+      "id": "13",
+      "name": "Blue Ribbon",
+      "category": "WordPress",
+      "img": "/assets/img/portfolio/blueribbon.jpg",
+      "url": "https://blueribbonmeatsmn.com/",
+      "des": "This website is a Shop site which Delivery Meats. "
+    },
+    {
+      "id": "14",
+      "name": "Rupani Foundation USA",
+      "category": "WordPress",
+      "img": "",
+      "url": "https://rupanifoundationusa.org/",
+      "des": "This website is a foundation of Child."
     }
+    
   ]
 }
